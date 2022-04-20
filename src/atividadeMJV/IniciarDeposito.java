@@ -22,7 +22,6 @@ public class IniciarDeposito  extends ContaBanco  {
 		Scanner leitor = new Scanner(System.in);
 		
 		conta.saldo = leitor.nextDouble();
-		
 		leitor.close();
 		//Usando o LocalDate.now (data) para trazer a data da atualização do saldo com o método (Now).
 		System.out.println("Atualizar saldo : " + NumberFormat.getCurrencyInstance().format(conta.saldo) + "     Data do Depósito : " + data);
