@@ -7,6 +7,10 @@ public class Pessoa {
 	String rg;
 	
 	Pessoa (String cpf, String nome){
-		
+		this.cpf = cpf;
+	}
+	
+	Pessoa(String cpf){
+		this(cpf,"B");
 	}
 }
