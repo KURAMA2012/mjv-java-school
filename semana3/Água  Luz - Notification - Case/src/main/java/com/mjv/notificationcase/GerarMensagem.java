@@ -1,31 +1,23 @@
 package com.mjv.notificationcase;
 
 import java.text.NumberFormat;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class GerarMensagem {
-	public String gerar(Cadastro cadastro, MensagemGerada mensagem) {
-
-		StringBuilder bs = new StringBuilder();
-
-		bs.append(cadastro.getNome());
-		bs.append(cadastro.getCpf());
-		bs.append(cadastro.getData());
-		bs.append(cadastro.getLogradouro());
-		bs.append(cadastro.getComplemento());
-		bs.append(cadastro.getBairro());
-		bs.append(cadastro.getCidade());
-		bs.append(cadastro.getCep());
-		bs.append(cadastro.NumeroDoProtocolo());
-		mensagem.Mensagem();
-		
+	public void mensagem(Cadastro cadastro, Contrato contrato) {
 
 		
-		
-		
-		String valorFormatado =  NumberFormat.getCurrencyInstance().format(cadastro.getValor());
-		bs.append(valorFormatado);
-		
+		String valorFormatado = NumberFormat.getCurrencyInstance().format(contrato.getValor());
 
-		return bs.toString();
+		String formatDataHora = LocalDateTime.of(2022, 02, 21, 16, 00).format(DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm"));
+		
+		String.format("%014d", Long.valueOf(cadastro.getCpf().replaceAll("\\D", "")));
+
+		System.out.println("Senhor(a) " + cadastro.getNome() + " cpf de número " + cadastro.getCpf()
+				+ ", Informamos que conforme contrato com protocolo de número " + contrato.NumeroDoProtocolo()
+				+ " está agendado para a data " + (formatDataHora) + " a instalação do serviço de " + contrato.getTiposervico() +" com taxa de valor "
+				+ (valorFormatado) + " em sua residência localizada no endereço abaixo:" + "\nLogradouro: " + cadastro.getLogradouro() + "\nComplemento: "
+				+ cadastro.getComplemento() + "\nBairro: " + cadastro.getBairro() + "\nCidade: " + cadastro.getCidade() + "\nCep: " + cadastro.getCep());
 	}
 }

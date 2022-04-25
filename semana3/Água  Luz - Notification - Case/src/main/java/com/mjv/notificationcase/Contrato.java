@@ -1,34 +1,42 @@
 package com.mjv.notificationcase;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 public class Contrato {
-	public static void main(String[] args)  {
 
-		Cadastro cadastro = new Cadastro();
-		cadastro.setNome("Gleyson Sampaio");
-		cadastro.setCpf("234.765.987-27");
-		cadastro.setData(LocalDateTime.of(2022, 02, 21, 16, 00));
-		cadastro.setLogradouro("Rua das Marias, 243");
-		cadastro.setComplemento("Ap 207, Bloco C");
-		cadastro.setBairro("Santo Antonio");
-		cadastro.setCidade("São Paulo / SP");
-		cadastro.setCep("27.310-657");
-		cadastro.setValor(127.33);
-		cadastro.NumeroDoProtocolo();
-		
-		MensagemGerada mensagem = new MensagemGerada();
-		mensagem.Mensagem();
-		
-		
-		
-		
+	private Double valor;
+	private LocalDate data;
+	private TipoServico tiposervico;
 
-		GerarMensagem gc = new GerarMensagem();
-		String conteudoGerador = gc.gerar(cadastro, mensagem);
-		
-
-		System.out.println(conteudoGerador);
+	public Double getValor() {
+		return valor;
 	}
+
+	public void setValor(Double valor) {
+		this.valor = valor;
+	}
+
+	public LocalDate getData() {
+		return data;
+	}
+
+	public void setData(LocalDate data) {
+		this.data = data;
+	}
+
+	public String NumeroDoProtocolo() {
+		return "2022025687";
+	}
+
+	public TipoServico getTiposervico() {
+		return tiposervico;
+	}
+
+	public void setTiposervico(TipoServico tiposervico) {
+		this.tiposervico = tiposervico;
+	}
+	
+
+	
 
 }

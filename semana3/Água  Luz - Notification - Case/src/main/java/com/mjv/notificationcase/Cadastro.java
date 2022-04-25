@@ -1,10 +1,7 @@
 package com.mjv.notificationcase;
 
-import java.time.LocalDateTime;
-
 public class Cadastro {
 
-	private LocalDateTime data;
 	private String nome;
 	private String cpf;
 	private String logradouro;
@@ -12,16 +9,9 @@ public class Cadastro {
 	private String bairro;
 	private String cidade;
 	private String cep;
-	private Double valor;
 
 
-	public LocalDateTime getData() {
-		return data;
-	}
 
-	public void setData(LocalDateTime data) {
-		this.data = data;
-	}
 
 	public String getNome() {
 		return nome;
@@ -77,26 +67,6 @@ public class Cadastro {
 
 	public void setCep(String cep) {
 		this.cep = cep;
-	}
-
-	public Double getValor() {
-		return valor;
-	}
-
-	public void setValor(Double valor) {
-		this.valor = valor;
-	}
-
-
-	@Override
-	public String toString() {
-		return "Cadastro [nome=" + nome + ", cpf=" + cpf + ", logradouro=" + logradouro + ", complemento=" + complemento
-				+ ", bairro=" + bairro + ", cidade=" + cidade + ", cep=" + cep + "]";
-
-	}
-	
-	public String NumeroDoProtocolo() {
-		return "2022025687";
 	}
 	
 }
