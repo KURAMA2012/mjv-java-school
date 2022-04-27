@@ -1,6 +1,6 @@
-package com.mjv.notificationcase;
+package domain;
 
-public class Cadastro {
+public class Pessoa {
 
 	private String nome;
 	private String cpf;
@@ -9,6 +9,22 @@ public class Cadastro {
 	private String bairro;
 	private String cidade;
 	private String cep;
+
+	public Pessoa() {
+
+	}
+
+	public Pessoa(String nome, String cpf, String logradouro, String complemento, String bairro, String cidade,
+			String cep) {
+		super();
+		this.nome = nome;
+		this.cpf = cpf;
+		this.logradouro = logradouro;
+		this.complemento = complemento;
+		this.bairro = bairro;
+		this.cidade = cidade;
+		this.cep = cep;
+	}
 
 	public String getNome() {
 		return nome;

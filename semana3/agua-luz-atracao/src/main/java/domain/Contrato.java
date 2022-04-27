@@ -1,6 +1,8 @@
-package com.mjv.notificationcase;
+package domain;
 
 import java.time.LocalDate;
+
+import servico.TipoServico;
 
 public class Contrato {
 
@@ -8,7 +10,17 @@ public class Contrato {
 	private LocalDate data;
 	private TipoServico tiposervico;
 
-	
+	public Contrato() {
+
+	}
+
+	public Contrato(Double valor, LocalDate data, TipoServico tiposervico) {
+		super();
+		this.valor = valor;
+		this.data = data;
+		this.tiposervico = tiposervico;
+	}
+
 	public Double getValor() {
 		return valor;
 	}
