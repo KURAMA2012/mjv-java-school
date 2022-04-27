@@ -27,9 +27,12 @@ public class IniciarSistema {
 		contrato.setTiposervico(tiposervico1);
 
 		GerarMensagem gc = new GerarMensagem();
-		gc.mensagem(pessoa, contrato);
+		String conteudoGerador = gc.mensagem(pessoa, contrato);
 		
 		GerarArquivo gr = new GerarArquivo();
+		gr.gerarArquivoCsv(conteudoGerador);
+		gr.gerarArquivoTxt(conteudoGerador);
+		
 		
 
 	}

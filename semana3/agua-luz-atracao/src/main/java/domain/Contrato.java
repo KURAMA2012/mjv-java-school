@@ -49,4 +49,10 @@ public class Contrato {
 		this.tiposervico = tiposervico;
 	}
 
+	@Override
+	public String toString() {
+		return "Contrato [valor=" + valor + ", data=" + data + ", tiposervico=" + tiposervico + "]";
+	}
+
+	
 }
