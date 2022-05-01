@@ -2,17 +2,17 @@ package repository;
 
 import java.util.ArrayList;
 
-import domain.Pessoa;
+import model.Cadastro;
 
 public class PessoaRepository {
 
-	private static ArrayList<Pessoa> cadastro = new ArrayList<Pessoa>();
+	private static ArrayList<Cadastro> cadastro = new ArrayList<Cadastro>();
 	
-	public static void salvarCadastroPessoa(Pessoa pessoa) {
+	public static void salvarCadastroPessoa(Cadastro pessoa) {
 		cadastro.add(pessoa);
 	}
 
-	private static Pessoa getPessoa(int listar) {
+	private static Cadastro getPessoa(int listar) {
 		return cadastro.get(listar);
 	}
 	
