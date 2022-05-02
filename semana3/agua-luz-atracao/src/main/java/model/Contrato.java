@@ -17,6 +17,7 @@ public class Contrato {
 	private LocalTime hora;
 	private TipoServico tiposervico;
 	private Notificacao tipoNotificacao;
+	private Cadastro cliente;
 
 	public Long getNumeroProtoloco() {
 		return numeroProtoloco;
@@ -82,11 +83,19 @@ public class Contrato {
 		this.hora = hora;
 	}
 
+	public Cadastro getCliente() {
+		return cliente;
+	}
+
+	public void setCliente(Cadastro cliente) {
+		this.cliente = cliente;
+	}
+
 	@Override
 	public String toString() {
 		return "Contrato [numeroProtoloco=" + numeroProtoloco + ", cadastro=" + cadastro + ", valor=" + valor
 				+ ", dataHora=" + dataHora + ", data=" + data + ", hora=" + hora + ", tiposervico=" + tiposervico
-				+ ", tipoNotificacao=" + tipoNotificacao + "]";
+				+ ", tipoNotificacao=" + tipoNotificacao + ", cliente=" + cliente + "]";
 	}
 
 }
