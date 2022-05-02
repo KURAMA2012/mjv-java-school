@@ -8,6 +8,7 @@ import model.Cadastro;
 import model.Contrato;
 import model.Endereco;
 import util.GerarArquivo;
+import util.GerarMensagem;
 import util.Local;
 import util.Notificacao;
 import util.PreparandoArquivo;
@@ -22,7 +23,7 @@ public class IniciarSistema {
 		Notificacao notificar1 = Notificacao.WHATS;
 
 		Endereco endereco = new Endereco();
-		endereco.setLogradouro("Rua Sebastião Firmino");
+		endereco.setLogradouro("Rua Sebastião Firmino, 243");
 		endereco.setComplemento("Ap 207, Bloco C");
 		endereco.setBairro("Santo Antonio");
 		endereco.setCidade("São Paulo / SP");
@@ -47,6 +48,8 @@ public class IniciarSistema {
 		contrato.setDataHora(LocalDateTime.now());
 		contrato.setTipoNotificacao(notificar1);
 
+		GerarMensagem gc = new GerarMensagem();
+		String geradorNotificacao = gc.mensagem(pessoa, contrato);
 
 		PreparandoArquivo gcCsv = new PreparandoArquivo();
 		String conteudoGeradorCsv = gcCsv.prepararConteudoArquivoCSV(pessoa, contrato);
