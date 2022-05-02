@@ -4,17 +4,15 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 
-import model.Cadastro;
-import model.Contrato;
-import model.Endereco;
-import util.GerarArquivo;
-import util.GerarMensagem;
-import util.Local;
-import util.Notificacao;
-import util.PreparandoArquivo;
-import util.TipoServico;
+import modal.Cadastro;
+import modal.Contrato;
+import modal.Endereco;
+import modal.Local;
+import modal.Notificacao;
+import modal.TipoServico;
+import service.GerarMensagem;
 
-public class IniciarSistema {
+class SistemaAguaLuzNotification {
 	public static void main(String[] args) {
 
 		TipoServico tiposervico1 = TipoServico.ÁGUA;
@@ -49,17 +47,5 @@ public class IniciarSistema {
 
 		GerarMensagem gc = new GerarMensagem();
 		String geradorNotificacao = gc.mensagem(pessoa, contrato);
-
-		PreparandoArquivo gcCsv = new PreparandoArquivo();
-		String conteudoGeradorCsv = gcCsv.prepararConteudoArquivoCSV(pessoa, contrato);
-
-		PreparandoArquivo gcTxt = new PreparandoArquivo();
-		String conteudoGeradorTxt = gcTxt.prepararConteudoArquivoTXT(pessoa, contrato);
-
-		GerarArquivo gr = new GerarArquivo();
-		gr.gerarArquivoCsv(conteudoGeradorCsv);
-		gr.gerarArquivoTxt(conteudoGeradorTxt);
-
 	}
-
 }

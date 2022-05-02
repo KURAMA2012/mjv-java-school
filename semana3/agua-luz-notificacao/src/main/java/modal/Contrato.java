@@ -1,14 +1,10 @@
-package model;
+package modal;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 
-import util.Notificacao;
-import util.TipoServico;
-
 public class Contrato {
-
 	private Long numeroProtoloco;
 	private Cadastro cadastro;
 	private Double valor;
@@ -31,6 +27,9 @@ public class Contrato {
 		return valor;
 	}
 
+	public void setValor(Double valor) {
+		this.valor = valor;
+	}
 
 	public LocalDateTime getDataHora() {
 		return dataHora;
@@ -46,7 +45,6 @@ public class Contrato {
 
 	public void setTiposervico(TipoServico tiposervico) {
 		this.tiposervico = tiposervico;
-		this.valor = tiposervico.getValor();
 	}
 
 	public Cadastro getCadastro() {
@@ -87,13 +85,6 @@ public class Contrato {
 
 	public void setCliente(Cadastro cliente) {
 		this.cliente = cliente;
-	}
-
-	@Override
-	public String toString() {
-		return "Contrato [numeroProtoloco=" + numeroProtoloco + ", cadastro=" + cadastro + ", valor=" + valor
-				+ ", dataHora=" + dataHora + ", data=" + data + ", hora=" + hora + ", tiposervico=" + tiposervico
-				+ ", tipoNotificacao=" + tipoNotificacao + ", cliente=" + cliente + "]";
 	}
 
 }
