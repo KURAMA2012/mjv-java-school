@@ -1,7 +1,5 @@
 package model;
 
-import util.Local;
-
 public class Endereco {
 
 	private String logradouro;

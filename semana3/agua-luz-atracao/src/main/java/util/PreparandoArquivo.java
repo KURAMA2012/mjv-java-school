@@ -110,7 +110,7 @@ public class PreparandoArquivo {
 		bs.append(String.format("%010d", Long.valueOf(contrato.getNumeroProtoloco())));
 		bs.append(contrato.getData().toString().replaceAll("\\D", ""));
 		bs.append(contrato.getHora().toString().replaceAll("\\D", ""));
-		bs.append(contrato.getTiposervico().getSigla());
+		bs.append(contrato.getTiposervico());//getSigla
 		bs.append(String.valueOf(contrato.getValor()).replaceAll("\\D", ""));
 		bs.append(contrato.getTipoNotificacao().getNotificar());
 

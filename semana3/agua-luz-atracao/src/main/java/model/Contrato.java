@@ -5,7 +5,6 @@ import java.time.LocalDateTime;
 import java.time.LocalTime;
 
 import util.Notificacao;
-import util.TipoServico;
 
 public class Contrato {
 
